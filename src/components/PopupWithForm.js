@@ -32,7 +32,7 @@ export default function PopupWithForm({
             type="submit"
             aria-label="Сохранить редактирование профиля"
           >
-            {buttonText}
+            {buttonText || 'Сохранить'}
           </button>
         </form>
       </div>

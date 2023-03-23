@@ -7,8 +7,8 @@ import Header from "./Header";
 import ImagePopup from "./ImagePopup";
 import Main from "./Main";
 import PopupWithForm from "./PopupWithForm";
-import { CurrentUserContext } from "../context/CurrentUserContext";
-import { api } from "../utils/api";
+import { CurrentUser } from "../contexts/CurrentUserContext";
+import api from "../utils/api";
 
 function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
@@ -104,7 +104,7 @@ function App() {
 
   return (
     <div className="page">
-      <CurrentUserContext.Provider value={{ currentUser }}>
+      <CurrentUser.Provider value={{ currentUser }}>
         <Header />
         <Main
           onEditProfile={handleEditProfileClick}
@@ -144,7 +144,7 @@ function App() {
           buttonText="Да"
           onClose={closeAllPopups}
         ></PopupWithForm>
-      </CurrentUserContext.Provider>
+      </CurrentUser.Provider>
     </div>
   );
 }

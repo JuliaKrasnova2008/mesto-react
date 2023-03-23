@@ -8,7 +8,7 @@ import ImagePopup from "./ImagePopup";
 import Main from "./Main";
 import PopupWithForm from "./PopupWithForm";
 import { CurrentUserContext } from "../context/CurrentUserContext";
-import { api } from "../utils/Api";
+import { api } from "../utils/api";
 
 function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);

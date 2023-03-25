@@ -10,7 +10,7 @@ export default function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
   useEffect(() => {
     setName(currentUser.name);
     setDescription(currentUser.about);
-  }, [currentUser]);
+  }, [currentUser]).catch((err)=>console.log(err));
 
   function handleSubmit(e) {
     // Запрещаем браузеру переходить по адресу формы

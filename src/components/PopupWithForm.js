@@ -21,18 +21,16 @@ export default function PopupWithForm({
         ></button>
         <h2 className="popup__title">{title}</h2>
         <form
-          id="formProfile"
           className="form form_type_profile"
           name={formName}
           method="POST"
-          noValidate
           onSubmit={onSubmit}
         >
           {children}
           <button
             className="form__submit"
             type="submit"
-            aria-label="Сохранить редактирование профиля"
+            aria-label="Сохранить редактирование"
           >
             {buttonText}
           </button>
